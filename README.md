@@ -1,22 +1,48 @@
 # Beyond Campus
 
-Beyond Campus is a web application that is designed to help online, commuter, and nontraditional college students connect with other students. Many students do not spend a lot of time on campus and it can be difficult for them to meet classmates or find people to study with. Beyond Campus gives students a way to find other students in their area, build study groups, communicate with classmates, and create more of a campus community.
+Beyond Campus is a web application that is designed to help online, commuter, and nontraditional college students connect with other students. Many students do not spend a lot of time on campus, and it can be difficult for them to meet classmates or find people to study with. Beyond Campus gives students a way to find other students in their area, build study groups, communicate with classmates, and create more of a campus community.
 
-The current version of the project includes a public homepage, a login page, React routing, an Express backend, and communication between the frontend and backend.
+The current version of the project includes a public homepage, an About page, a login page, React routing, an Express backend, and communication between the frontend and backend.
+
+## Hosted Version
+
+The app is hosted on Vercel.
+
+```text
+https://beyond-campus-rho.vercel.app
+```
+
+The deployed backend test route can be viewed at:
+
+```text
+https://beyond-campus-rho.vercel.app/api
+```
+
+The login feature is still a demo feature. It only confirms that the frontend and backend can communicate. It does not create real accounts, store passwords, or authenticate users yet.
 
 ## Project Structure
 
 ```text
 Beyond_Campus
+├── api
+│   └── index.js
+├── backend
 ├── frontend
-└── backend
+├── README.md
+├── package.json
+├── package-lock.json
+└── vercel.json
 ```
 
 The `frontend` folder contains the React and Vite application.
 
-The `backend` folder contains the Node.js and Express server.
+The `backend` folder contains the local Node.js and Express server.
 
-The frontend and backend must be installed and started separately.
+The `api` folder contains the Vercel backend API route that is used when the app is deployed online.
+
+The `vercel.json` file contains deployment settings for the Vercel version of the project.
+
+The frontend and backend must be installed and started separately for local development.
 
 ## Required Software
 
@@ -75,6 +101,12 @@ The public homepage can be viewed at:
 
 ```text
 http://localhost:5173/
+```
+
+The About page can be viewed at:
+
+```text
+http://localhost:5173/about
 ```
 
 The login page can be viewed at:
@@ -150,7 +182,7 @@ The browser should display:
 
 Keep this terminal open while testing the application.
 
-## Running the Full Application
+## Running the Full Application Locally
 
 The frontend and backend must be running at the same time.
 
@@ -174,9 +206,35 @@ After both servers are running, open the following address:
 http://localhost:5173
 ```
 
-The homepage includes links that allow the user to move to the login page. The login page also includes a link that allows the user to return to the homepage.
+The homepage includes links that allow the user to move to the About page and login page. The login page also includes a link that allows the user to return to the homepage.
 
 The login buttons currently send a temporary request to the backend. This is used to show that the frontend and backend are able to communicate with each other. The current login feature does not create real accounts or authenticate users yet.
+
+## Vercel Deployment
+
+The deployed version uses Vercel to host the frontend and the backend API route.
+
+For the Vercel version, the backend route is located in:
+
+```text
+api/index.js
+```
+
+The Vercel backend test route is:
+
+```text
+https://beyond-campus-rho.vercel.app/api
+```
+
+The login demo route is:
+
+```text
+https://beyond-campus-rho.vercel.app/api/login
+```
+
+The login route is used by the login page to test that the React frontend can send information to the Express backend and receive a response.
+
+This is not real authentication yet. It does not create accounts, store passwords, or sign users in.
 
 ## Available Commands
 
@@ -211,11 +269,33 @@ npm start
 
 `npm start` starts the backend with Node without automatically restarting it.
 
+## Technologies and Libraries
+
+This project uses:
+
+* HTML
+* CSS
+* JavaScript
+* React
+* Vite
+* React Router
+* Node.js
+* Express
+* CORS
+* Helmet
+* dotenv
+* Nodemon
+* Vercel
+
+The About page in the app includes more information about the project technologies, libraries, design credit, and image credits.
+
 ## Security
 
 The backend uses Helmet to add security related HTTP headers.
 
-CORS is configured so that the backend only accepts browser requests from:
+CORS is configured so that the backend only accepts browser requests from the frontend.
+
+For local development, the frontend usually runs at:
 
 ```text
 http://localhost:5173
@@ -225,15 +305,16 @@ Express limits incoming JSON requests to 10 kilobytes.
 
 The temporary login route also checks the login method that is sent by the frontend. It currently only accepts phone or Google as supported login methods.
 
-Private environment information is stored inside the `.env` file. The `.env` file and the `node_modules` folders are excluded through `.gitignore`.
+Private environment information is stored inside the `.env` file. The `.env` file, `.env.local` file, `node_modules` folders, and `dist` folders are excluded through `.gitignore`.
 
 ## Current Features
 
 The current version of Beyond Campus includes:
 
 * A responsive public homepage
+* An About page with project information, technologies, libraries, and image credits
 * A login page based on the original Figma design
-* Navigation between the homepage and login page
+* Navigation between the homepage, About page, and login page
 * A copyright footer with the developer's name
 * React Router page navigation
 * A Node.js and Express backend
@@ -244,6 +325,24 @@ The current version of Beyond Campus includes:
 * CORS configuration
 * Environment variables
 * Basic input checking
+* SEO meta tags in the HTML file
+* Semantic page structure
+* Vercel deployment
+* A Vercel API route for the deployed backend demo
+
+## Future Features
+
+Future versions of Beyond Campus may include:
+
+* Real user authentication
+* Student profiles
+* Study group creation
+* Messaging between students
+* Location based student matching
+* A dashboard after login
+* Sign up functionality
+
+The current login and sign up features are demo or future features only.
 
 ## Troubleshooting
 
@@ -259,7 +358,7 @@ If the backend does not start, make sure the terminal is inside the `backend` fo
 npm run dev
 ```
 
-If the login page cannot connect to the backend, make sure both servers are running at the same time.
+If the login page cannot connect to the backend locally, make sure both servers are running at the same time.
 
 The frontend should run on port `5173`.
 
@@ -268,6 +367,8 @@ The backend should run on port `3000`.
 If port `5173` is already being used, Vite may choose a different port. If this happens, update the `FRONTEND_URL` inside the backend `.env` file so it matches the address shown in the frontend terminal.
 
 Restart the backend after changing the `.env` file.
+
+If the deployed Vercel version does not update right away, check that the latest changes were pushed to GitHub and then check the Vercel Deployments tab.
 
 ## Developer
 
