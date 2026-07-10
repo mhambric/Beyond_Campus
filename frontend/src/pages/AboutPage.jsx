@@ -202,6 +202,11 @@ function AboutPage() {
             creating the homepage and login page in React.
           </p>
 
+          <p>
+          I created the page layouts with CSS and organized the app with clear page
+          sections.
+          </p>
+
         </section>
 
                 {/* Image citation section */}
