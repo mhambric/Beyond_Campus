@@ -64,8 +64,7 @@ function AboutPage() {
 
           <p>
             The current version of Beyond Campus includes a public homepage, a
-            login page, page navigation, a backend server, and communication
-            between the frontend and backend.
+            login page, a backend server, and communication between the frontend and backend.
           </p>
 
           <p>
@@ -203,10 +202,6 @@ function AboutPage() {
             creating the homepage and login page in React.
           </p>
 
-          <p>
-            I also used common responsive web design methods, including CSS
-            Grid, Flexbox, media queries, and semantic HTML page structure.
-          </p>
         </section>
 
                 {/* Image citation section */}
