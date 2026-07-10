@@ -1,0 +1,558 @@
+/* Reset default spacing and use border box sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base page styling */
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* Inherit the page font for links and buttons */
+button,
+a {
+  font: inherit;
+}
+
+/* Login page layout */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0;
+}
+
+/* Main login page container */
+.login-container {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  border-radius: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  background-color: #ffffff;
+  box-shadow: none;
+}
+
+/* Login page image section */
+.login-image {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Login page image */
+.login-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Login content section */
+.login-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+/* Login page heading */
+.login-content h1 {
+  margin-bottom: 32px;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #111111;
+}
+
+/* Login button container */
+.login-options {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Shared login button styling */
+.phone-login-button,
+.google-login-button {
+  width: 100%;
+  min-height: 54px;
+  border: none;
+  border-radius: 999px;
+  display: grid;
+  grid-template-columns: 35px 1fr 35px;
+  align-items: center;
+  padding: 0 18px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Phone login button */
+.phone-login-button {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Google login button */
+.google-login-button {
+  background-color: #f1f1f3;
+  color: #222222;
+}
+
+/* Login button icon layout */
+.button-icon,
+.google-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+/* Phone icon styling */
+.button-icon {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Google icon styling */
+.google-icon {
+  background-color: #ffffff;
+  color: #4285f4;
+  font-weight: 700;
+}
+
+/* Sign up message */
+.signup-text {
+  margin-top: 24px;
+  font-size: 0.85rem;
+  color: #777777;
+}
+
+/* Sign up link */
+.signup-text a {
+  color: #d88b6d;
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+/* Backend response message */
+.form-message {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555555;
+}
+
+/* Link back to the public homepage */
+.back-to-homepage {
+  align-self: center;
+  margin-bottom: 2rem;
+  color: #0a0202;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-to-homepage:hover {
+  color: #a2650a;
+  text-decoration: underline;
+}
+
+/* Login page tablet and mobile layout */
+@media (max-width: 500px) {
+  .login-container {
+    grid-template-columns: 1fr;
+  }
+
+  .login-image {
+    height: 280px;
+  }
+
+  .login-content {
+    padding: 2rem;
+  }
+}
+
+/* Login page phone layout */
+@media (max-width: 500px) {
+  .login-page {
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .login-container {
+    max-width: none;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+
+  .login-image {
+    height: 250px;
+  }
+
+  .login-content {
+    padding: 30px 28px 40px;
+  }
+
+  .login-content h1 {
+    font-size: 1.45rem;
+  }
+}
+
+/* Public landing homepage */
+.home-page {
+  min-height: 100vh;
+  background-color: #91bc11;
+  color: #111111;
+}
+
+/* Homepage header */
+.home-header {
+  width: 100%;
+  padding: 1.25rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* Beyond Campus logo link */
+.home-logo {
+  color: #111111;
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Homepage navigation */
+.home-navigation {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.home-navigation a {
+  color: #333333;
+  text-decoration: none;
+}
+
+/* Header login button */
+.header-login-button {
+  padding: 0.65rem 1.25rem;
+  border-radius: 999px;
+  background-color: #000000;
+  color: #ffffff !important;
+}
+
+/* Homepage hero section */
+.home-hero {
+  min-height: 680px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Homepage hero text content */
+.home-hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+}
+
+/* Small heading above the main title */
+.home-label {
+  margin-bottom: 1rem;
+  color: #10859c;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+}
+
+/* Main homepage heading */
+.home-hero h1 {
+  max-width: 650px;
+  margin-bottom: 1.5rem;
+  font-size: clamp(2.7rem, 5vw, 4.8rem);
+  line-height: 1.08;
+}
+
+/* Homepage app description */
+.home-description {
+  max-width: 650px;
+  margin-bottom: 2rem;
+  color: #0a0707;
+  font-size: 1.1rem;
+}
+
+/* Homepage action button container */
+.home-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Shared homepage button styling */
+.home-primary-button,
+.home-secondary-button {
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Get started button */
+.home-primary-button {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Learn more button */
+.home-secondary-button {
+  border: 1px solid #000000;
+  color: #000000;
+}
+
+/* Homepage hero image section */
+.home-hero-image {
+  min-height: 680px;
+  background-color: #a9dce7;
+  overflow: hidden;
+}
+
+/* Homepage hero image */
+.home-hero-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* How the application works section */
+.how-it-works {
+  padding: 5rem 4rem;
+  background-color: #f7f7f8;
+}
+
+/* How it works heading */
+.how-it-works h2 {
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-size: 2.25rem;
+}
+
+/* Feature card grid */
+.home-feature-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Individual feature card */
+.home-feature-card {
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+/* Feature step number */
+.feature-number {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 1rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: #a9dce7;
+  font-weight: 700;
+}
+
+/* Feature card heading */
+.home-feature-card h3 {
+  margin-bottom: 0.75rem;
+}
+
+/* Feature card description */
+.home-feature-card p:last-child {
+  color: #666666;
+}
+
+/* Homepage footer */
+.home-footer {
+  padding: 2rem;
+  background-color: #ffffff;
+  color: #666666;
+  text-align: center;
+}
+
+/* Homepage tablet layout */
+@media (max-width: 850px) {
+  .home-header {
+    padding: 1rem 1.5rem;
+  }
+
+  .home-navigation {
+    gap: 1rem;
+  }
+
+  .home-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero-content {
+    padding: 4rem 2rem;
+  }
+
+  .home-hero-image {
+    min-height: 350px;
+  }
+
+  .home-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .how-it-works {
+    padding: 4rem 1.5rem;
+  }
+}
+
+/* Homepage phone layout */
+@media (max-width: 500px) {
+  .home-navigation a:first-child {
+    display: none;
+  }
+
+  .home-hero-content {
+    padding: 3rem 1.25rem;
+  }
+
+  .home-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+  }
+
+  .home-primary-button,
+  .home-secondary-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* About page layout */
+.about-page {
+  min-height: 100vh;
+  background-color: #f7f7f8;
+  color: #111111;
+}
+
+/* Main about page content */
+.about-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* About page introduction card */
+.about-hero {
+  margin-bottom: 2rem;
+  padding: 3rem;
+  background-color: #91bc11;
+  border-radius: 24px;
+}
+
+/* About page main heading */
+.about-hero h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+}
+
+/* About page introduction text */
+.about-hero p {
+  max-width: 850px;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* About page content cards */
+.about-section {
+  margin-bottom: 1.5rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+/* About page section headings */
+.about-section h2 {
+  margin-bottom: 1rem;
+  color: #111111;
+  font-size: 1.75rem;
+}
+
+/* About page paragraph text */
+.about-section p {
+  margin-bottom: 1rem;
+  color: #555555;
+  line-height: 1.7;
+}
+
+/* About page list */
+.about-section ul {
+  margin-left: 1.5rem;
+}
+
+/* About page list items */
+.about-section li {
+  margin-bottom: 0.85rem;
+  color: #555555;
+  line-height: 1.6;
+}
+
+/* About page links */
+.about-section a {
+  color: #10859c;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* About page link hover */
+.about-section a:hover {
+  color: #a2650a;
+  text-decoration: underline;
+}
+
+/* About page mobile layout */
+@media (max-width: 800px) {
+  .about-main {
+    padding: 2rem 1rem;
+  }
+
+  .about-hero {
+    padding: 2rem;
+  }
+
+  .about-section {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "beyond_campus",
+  "version": "1.0.0",
+  "description": "Beyond Campus is a web application that is designed to help online, commuter, and nontraditional college students connect with other students. Many students do not spend a lot of time on campus and it can be difficult for them to meet classmates or find people to study with. Beyond Campus gives students a way to find other students in their area, build study groups, communicate with classmates, and create more of a campus community.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "helmet": "^8.2.0"
+  }
+}
