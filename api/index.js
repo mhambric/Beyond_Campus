@@ -1,3 +1,9 @@
+// Demo login route for the deployed Vercel backend.
+// This route is used by the login page to test that the React frontend
+// can send information to the Express backend and receive a response.
+// This is not real authentication yet.
+// It does not create accounts, store passwords, or sign users in.
+
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
