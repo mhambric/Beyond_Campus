@@ -1,7 +1,7 @@
 // React Router link used to move between pages
 import { Link } from "react-router-dom";
 
-// Public homepage for the Beyond Campus application
+// Public homepage for the Student PeerNest application
 function HomePage() {
   return (
     <div className="home-page">
@@ -9,7 +9,7 @@ function HomePage() {
       <header className="home-header">
         {/* Logo also works as a link back to the homepage */}
         <Link to="/" className="home-logo">
-          Beyond Campus
+          Student PeerNest
         </Link>
 
         {/* Navigation link to the login page */}
@@ -33,7 +33,7 @@ function HomePage() {
             <h1>Find students who understand your schedule and goals.</h1>
 
             <p className="home-description">
-              Beyond Campus helps online, commuter, and nontraditional students
+              Student PeerNest helps online, commuter, and nontraditional students
               connect with classmates in their area. Students can find study
               partners, build study groups, communicate with other students and find campus community.
             </p>
@@ -61,7 +61,7 @@ function HomePage() {
 
         {/* Explanation of the main application process */}
         <section id="how-it-works" className="how-it-works">
-          <h2>How Beyond Campus Works</h2>
+          <h2>How Student PeerNest Works</h2>
 
           {/* Three main steps for using the application */}
           <div className="home-feature-grid">

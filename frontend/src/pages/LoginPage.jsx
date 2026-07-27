@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 // Backend URL used for local development or online deployment
 const API_URL = import.meta.env.VITE_API_URL || "";
 
-// Login page for the Beyond Campus application
+// Login page for the Student PeerNest application
 function LoginPage() {
   // Message returned from the backend
   const [message, setMessage] = useState("");
@@ -82,7 +82,7 @@ function LoginPage() {
         <div className="login-content">
           {/* Link back to the public homepage */}
           <Link to="/" className="back-to-homepage">
-            Click Here To Learn More About Beyond Campus
+            Click Here To Learn More About Student PeerNest
           </Link>
 
           {/* Main login page heading */}

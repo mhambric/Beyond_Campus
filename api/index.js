@@ -23,7 +23,7 @@ app.use(express.json({ limit: "10kb" }));
 
 app.get("/api", (req, res) => {
   res.status(200).json({
-    message: "Beyond Campus backend is running on Vercel.",
+    message: "Student PeerNest backend is running on Vercel.",
   });
 });
 

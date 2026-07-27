@@ -1,6 +1,7 @@
-# Beyond Campus
+# Student PeerNest
 
-Beyond Campus is a web application that is designed to help online, commuter, and nontraditional college students connect with other students. Many students do not spend a lot of time on campus, and it can be difficult for them to meet classmates or find people to study with. Beyond Campus gives students a way to find other students in their area, build study groups, communicate with classmates, and create more of a campus community.
+Student PeerNest is a web application that is designed to help online, commuter, and nontraditional college students connect with other students. Many students do not spend a lot of time on campus, and it can be difficult for them to meet classmates or find people to study with. Student PeerNest gives students a way to find other students in their area, build study groups, communicate with classmates, and create more of a campus community.
+
 
 The current version of the project includes a public homepage, an About page, a login page, React routing, an Express backend, and communication between the frontend and backend.
 
@@ -23,7 +24,7 @@ The login feature is still a demo feature. It only confirms that the frontend an
 ## Project Structure
 
 ```text
-Beyond_Campus
+Student PeerNest
 ├── api
 │   └── index.js
 ├── backend
@@ -64,7 +65,7 @@ Download the ZIP file and extract it onto the computer.
 Open a terminal and move into the main project folder:
 
 ```bash
-cd Beyond_Campus
+cd Student-PeerNest
 ```
 
 The frontend and backend will need to be opened in separate terminals because they run at the same time.
@@ -176,7 +177,7 @@ The browser should display:
 
 ```json
 {
-  "message": "Beyond Campus backend is running."
+  "message": "Student PeerNest backend is running."
 }
 ```
 
@@ -309,7 +310,7 @@ Private environment information is stored inside the `.env` file. The `.env` fil
 
 ## Current Features
 
-The current version of Beyond Campus includes:
+The current version of Student PeerNest includes:
 
 * A responsive public homepage
 * An About page with project information, technologies, libraries, and image credits
@@ -332,7 +333,7 @@ The current version of Beyond Campus includes:
 
 ## Future Features
 
-Future versions of Beyond Campus may include:
+Future versions of Student PeerNest may include:
 
 * Real user authentication
 * Student profiles

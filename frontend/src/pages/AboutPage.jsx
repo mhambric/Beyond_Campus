@@ -7,7 +7,7 @@ function AboutPage() {
       {/* Header navigation */}
       <header className="home-header">
         <Link to="/" className="home-logo">
-          Beyond Campus
+          Student PeerNest
         </Link>
 
         <nav className="home-navigation">
@@ -23,10 +23,10 @@ function AboutPage() {
       <main className="about-main">
         {/* Introduction section */}
         <section className="about-hero">
-          <h1>About Beyond Campus</h1>
+          <h1>About Student PeerNest</h1>
 
           <p>
-            Beyond Campus is a web application I created to help online,
+            Student PeerNest is a web application I created to help online,
             commuter, and nontraditional college students connect with other
             students. Many students do not spend a lot of time on campus, so it
             can be harder to meet classmates, find study partners, or feel part
@@ -34,7 +34,7 @@ function AboutPage() {
           </p>
 
           <p>
-            The goal of Beyond Campus is to make it easier for students to find
+            The goal of Student PeerNest is to make it easier for students to find
             people with similar classes, schedules, study goals, and locations.
           </p>
         </section>
@@ -52,7 +52,7 @@ function AboutPage() {
 
           <p>
             I created this project because I understand how isolating online
-            school can feel. Beyond Campus is meant to support students who may
+            school can feel. Student PeerNest is meant to support students who may
             be balancing school, work, family, health, commuting, or other life
             responsibilities while still trying to build academic connections.
           </p>
@@ -63,7 +63,7 @@ function AboutPage() {
           <h2>Current Project Status</h2>
 
           <p>
-            The current version of Beyond Campus includes a public homepage, a
+            The current version of  includes a public homepage, a
             login page, a backend server, and communication between the frontend and backend.
           </p>
 
@@ -87,7 +87,7 @@ function AboutPage() {
           <ul>
             <li>
               <a href="https://react.dev/" target="_blank" rel="noreferrer">
-                React
+                ReactStudent PeerNest
               </a>{" "}
               is used to build the frontend user interface.
             </li>
@@ -197,7 +197,7 @@ function AboutPage() {
           <h2>Design Credit</h2>
 
           <p>
-            The layout and visual design for Beyond Campus were based on my own
+            The layout and visual design for Student PeerNest were based on my own
             original Figma prototype. I used the prototype as a guide when
             creating the homepage and login page in React.
           </p>
@@ -239,7 +239,7 @@ function AboutPage() {
           <h2>Future Features</h2>
 
           <p>
-            Future versions of Beyond Campus may include real authentication,
+            Future versions of Student PeerNest may include real authentication,
             student profiles, study partner search, location based matching,
             course filters, study group creation, messaging, and online hosting.
           </p>
