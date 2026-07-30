@@ -14,7 +14,6 @@ function ProfilePage() {
         </Link>
 
         <nav className="home-navigation" aria-label="Main navigation">
-          <Link to="/dashboard">Discover</Link>
           <Link to="/about">About</Link>
           <Link to="/login" className="header-login-button">
             Log Out
