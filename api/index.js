@@ -42,8 +42,10 @@ app.post("/api/login", (req, res) => {
     });
   }
 
+  const formattedLoginMethod = loginMethod === "google" ? "Google" : "Phone";
+
   return res.status(200).json({
-    message: `${loginMethod} demo login request received. Real login is not active yet.`,
+    message: `${formattedLoginMethod} demo login request received. Real login is not active yet.`,
   });
 });
 

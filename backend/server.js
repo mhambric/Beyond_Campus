@@ -41,7 +41,7 @@ app.use(express.json({ limit: "10kb" }));
 // Test route used to confirm that the backend is running
 app.get("/api", (req, res) => {
   res.status(200).json({
-    message: "Beyond Campus backend is running.",
+    message: "Student PeerNest backend is running.",
   });
 });
 
@@ -64,9 +64,12 @@ app.post("/api/login", (req, res) => {
     });
   }
 
+  // Capitalizes the login method for the user message
+  const formattedLoginMethod = loginMethod === "google" ? "Google" : "Phone";
+
   // Returns a successful response for a supported login method
   return res.status(200).json({
-    message: `${loginMethod} login request received.`,
+    message: `${formattedLoginMethod} demo login request received. Real login is not active yet.`,
   });
 });
 
@@ -90,7 +93,7 @@ app.use((error, req, res, next) => {
 // Starts the backend server
 if (process.env.NODE_ENV !== "production") {
   app.listen(PORT, () => {
-    console.log(`Beyond Campus backend running on port ${PORT}`);
+    console.log(`Student PeerNest backend running on port ${PORT}`);
   });
 }
 

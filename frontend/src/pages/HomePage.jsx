@@ -8,12 +8,15 @@ function HomePage() {
       {/* Homepage header with logo and login navigation */}
       <header className="home-header">
         {/* Logo also works as a link back to the homepage */}
-        <Link to="/" className="home-logo">
-          Student PeerNest
+        <Link to="/" className="home-logo" aria-label="Student PeerNest homepage">
+          <span className="logo-symbol" aria-hidden="true">
+            SP
+          </span>
+          <span>Student PeerNest</span>
         </Link>
 
-        {/* Navigation link to the login page */}
-        <nav className="home-navigation">
+        {/* Navigation links */}
+        <nav className="home-navigation" aria-label="Main navigation">
           <Link to="/about">About</Link>
 
           <Link to="/login" className="header-login-button">
@@ -35,7 +38,8 @@ function HomePage() {
             <p className="home-description">
               Student PeerNest helps online, commuter, and nontraditional students
               connect with classmates in their area. Students can find study
-              partners, build study groups, communicate with other students and find campus community.
+              partners, build study groups, communicate with other students, and
+              find campus community.
             </p>
 
             {/* Buttons for login and additional information */}
@@ -55,6 +59,7 @@ function HomePage() {
             <img
               src="/home-page.png"
               alt="Students connecting with each other"
+              title="Student PeerNest homepage illustration"
             />
           </div>
         </section>
@@ -66,14 +71,14 @@ function HomePage() {
           {/* Three main steps for using the application */}
           <div className="home-feature-grid">
             {/* Step one create a student profile */}
-            <article className="home-feature-card">
+            <Link to="/login" className="home-feature-card feature-card-link">
               <p className="feature-number">1</p>
               <h3>Create a Profile</h3>
               <p>
                 Add your school, major, courses, location, availability, and study
                 preferences.
               </p>
-            </article>
+            </Link>
 
             {/* Step two search for compatible students */}
             <article className="home-feature-card">

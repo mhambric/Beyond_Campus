@@ -2,21 +2,20 @@
 
 Student PeerNest is a web application that is designed to help online, commuter, and nontraditional college students connect with other students. Many students do not spend a lot of time on campus, and it can be difficult for them to meet classmates or find people to study with. Student PeerNest gives students a way to find other students in their area, build study groups, communicate with classmates, and create more of a campus community.
 
-
-The current version of the project includes a public homepage, an About page, a login page, React routing, an Express backend, and communication between the frontend and backend.
+The current version of the project includes a public homepage, an About page, a login page, a logged in Discovery dashboard, placeholder pages for Feed, Messenger, and Profile, React routing, an Express backend, and communication between the frontend and backend.
 
 ## Hosted Version
 
 The app is hosted on Vercel.
 
 ```text
-https://beyond-campus-rho.vercel.app
+https://student-peernest-rho.vercel.app
 ```
 
 The deployed backend test route can be viewed at:
 
 ```text
-https://beyond-campus-rho.vercel.app/api
+https://student-peernest-rho.vercel.app/api
 ```
 
 The login feature is still a demo feature. It only confirms that the frontend and backend can communicate. It does not create real accounts, store passwords, or authenticate users yet.
@@ -24,7 +23,7 @@ The login feature is still a demo feature. It only confirms that the frontend an
 ## Project Structure
 
 ```text
-Student PeerNest
+Student-PeerNest
 ├── api
 │   └── index.js
 ├── backend
@@ -114,6 +113,30 @@ The login page can be viewed at:
 
 ```text
 http://localhost:5173/login
+```
+
+The Discovery dashboard can be viewed at:
+
+```text
+http://localhost:5173/dashboard
+```
+
+The Feed page can be viewed at:
+
+```text
+http://localhost:5173/feed
+```
+
+The Messenger page can be viewed at:
+
+```text
+http://localhost:5173/messages
+```
+
+The Profile page can be viewed at:
+
+```text
+http://localhost:5173/profile
 ```
 
 Keep this terminal open while using the application.
@@ -207,9 +230,9 @@ After both servers are running, open the following address:
 http://localhost:5173
 ```
 
-The homepage includes links that allow the user to move to the About page and login page. The login page also includes a link that allows the user to return to the homepage.
+The homepage includes links that allow the user to move to the About page and login page. The login page includes consistent navigation, so users can return to Home or About without using the browser back button.
 
-The login buttons currently send a temporary request to the backend. This is used to show that the frontend and backend are able to communicate with each other. The current login feature does not create real accounts or authenticate users yet.
+The login buttons currently send a temporary request to the backend. This is used to show that the frontend and backend are able to communicate with each other. After a successful demo login, the user is moved to the Discovery dashboard. The current login feature does not create real accounts or authenticate users yet.
 
 ## Vercel Deployment
 
@@ -224,13 +247,13 @@ api/index.js
 The Vercel backend test route is:
 
 ```text
-https://beyond-campus-rho.vercel.app/api
+https://student-peernest-rho.vercel.app/api
 ```
 
 The login demo route is:
 
 ```text
-https://beyond-campus-rho.vercel.app/api/login
+https://student-peernest-rho.vercel.app/api/login
 ```
 
 The login route is used by the login page to test that the React frontend can send information to the Express backend and receive a response.
@@ -280,6 +303,8 @@ This project uses:
 * React
 * Vite
 * React Router
+* React Icons
+* Google Fonts
 * Node.js
 * Express
 * CORS
@@ -289,6 +314,30 @@ This project uses:
 * Vercel
 
 The About page in the app includes more information about the project technologies, libraries, design credit, and image credits.
+
+## Week 6 and 7 Frontend Design Updates
+
+For the Week 6 and 7 frontend design deliverable, I continued improving the frontend design and user experience for Student PeerNest.
+
+The updates include:
+
+* Updated Student PeerNest branding
+* A simple SP logo symbol in the header
+* Updated favicon
+* Improved color scheme and styling
+* Google Font styling using the CSS import method
+* React Icons for logged in toolbar navigation
+* A logged in Discovery dashboard
+* Toolbar navigation for Discovery, Feed, Messenger, and Profile
+* Placeholder pages for Feed, Messenger, and Profile
+* Sample student profile images on the Discovery dashboard
+* Image credits added to the About page
+* More noticeable login demo message
+* Fixed Google capitalization in the backend login response
+* Consistent navigation on the Login page
+* A clickable Create a Profile card on the homepage
+* Accessibility updates such as alt text, aria labels, focus states, and semantic page sections
+* Mobile responsive layout updates
 
 ## Security
 
@@ -308,6 +357,8 @@ The temporary login route also checks the login method that is sent by the front
 
 Private environment information is stored inside the `.env` file. The `.env` file, `.env.local` file, `node_modules` folders, and `dist` folders are excluded through `.gitignore`.
 
+The current login feature is a demo only. The app does not store passwords or authenticate real users yet.
+
 ## Current Features
 
 The current version of Student PeerNest includes:
@@ -315,9 +366,14 @@ The current version of Student PeerNest includes:
 * A responsive public homepage
 * An About page with project information, technologies, libraries, and image credits
 * A login page based on the original Figma design
-* Navigation between the homepage, About page, and login page
+* A Discovery dashboard after demo login
+* Toolbar navigation for logged in pages
+* Placeholder Feed, Messenger, and Profile pages
+* Navigation between the homepage, About page, login page, dashboard, feed, messenger, and profile pages
 * A copyright footer with the developer's name
 * React Router page navigation
+* React Icons in the logged in toolbar
+* Google Font styling
 * A Node.js and Express backend
 * A backend test route
 * A temporary login route
@@ -331,6 +387,19 @@ The current version of Student PeerNest includes:
 * Vercel deployment
 * A Vercel API route for the deployed backend demo
 
+## Image Credits
+
+The profile images are sample images used for the Student PeerNest prototype. They do not represent real Student PeerNest users.
+
+The About page includes citations for:
+
+* Jason sample profile image from Pixabay
+* Sara sample profile image from Pixabay
+* Hanna sample profile image from Pixabay
+* Kyle sample profile image from Pixabay
+* Homepage education illustration from Storyset
+* Login page people illustration from Storyset
+
 ## Future Features
 
 Future versions of Student PeerNest may include:
@@ -340,8 +409,9 @@ Future versions of Student PeerNest may include:
 * Study group creation
 * Messaging between students
 * Location based student matching
-* A dashboard after login
-* Sign up functionality
+* Course filters
+* Search and discovery features
+* A working sign up feature
 
 The current login and sign up features are demo or future features only.
 

@@ -3,6 +3,23 @@
   Storyset illustrations are credited on the About page.
 */
 
+/* Google font for the application */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* Main color scheme for Student PeerNest */
+:root {
+  --color-primary: #91bc11;
+  --color-primary-dark: #6f9208;
+  --color-accent: #d88b6d;
+  --color-accent-dark: #a2650a;
+  --color-background: #f7f7f8;
+  --color-card: #ffffff;
+  --color-text: #111111;
+  --color-muted: #555555;
+  --color-border: #dddddd;
+  --color-focus: #10859c;
+}
+
 /* Reset default spacing and use border box sizing */
 * {
   box-sizing: border-box;
@@ -14,8 +31,9 @@
 body {
   min-width: 320px;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   background-color: #f2f2f2;
+  color: var(--color-text);
 }
 
 /* Inherit the page font for links and buttons */
@@ -559,5 +577,589 @@ a {
 
   .about-section {
     padding: 1.5rem;
+  }
+}
+
+/* Better focus outline for keyboard accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 4px;
+}
+
+/* Smooth hover and focus transitions */
+a,
+button {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease,
+    transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Button hover polish */
+.phone-login-button:hover,
+.home-primary-button:hover,
+.header-login-button:hover {
+  background-color: #222222;
+  transform: translateY(-2px);
+}
+
+/* Secondary button hover polish */
+.google-login-button:hover,
+.home-secondary-button:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Sign up link focus and hover */
+.signup-text a:focus-visible,
+.signup-text a:hover {
+  color: var(--color-accent-dark);
+  text-decoration: underline;
+}
+
+/* Homepage logo hover */
+.home-logo:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Navigation link hover */
+.home-navigation a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Hero image polish */
+.home-hero-image img,
+.login-image img {
+  image-rendering: auto;
+}
+
+/* Card hover polish */
+.home-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.1);
+}
+
+/* Keeps motion gentle for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  a,
+  button,
+  .home-feature-card {
+    transition: none;
+  }
+
+  .phone-login-button:hover,
+  .google-login-button:hover,
+  .home-primary-button:hover,
+  .home-secondary-button:hover,
+  .header-login-button:hover,
+  .home-feature-card:hover {
+    transform: none;
+  }
+}
+
+/* Extra mobile polish */
+@media (max-width: 500px) {
+  .home-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .home-navigation {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .home-label {
+    font-size: 0.85rem;
+  }
+
+  .home-description {
+    font-size: 1rem;
+  }
+
+  .login-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .back-to-homepage {
+    text-align: center;
+  }
+}
+
+/* Student PeerNest wordmark and logo symbol */
+.home-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #111111;
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Small logo symbol for Student PeerNest */
+.logo-symbol {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: #91bc11;
+  color: #111111;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+/* Login page status message */
+.form-message {
+  width: 100%;
+  margin-top: 18px;
+  padding: 1rem;
+  border: 2px solid #a2650a;
+  border-radius: 16px;
+  background-color: #fff4e6;
+  color: #7a3f00;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(162, 101, 10, 0.18);
+}
+
+/* Makes homepage feature cards work as links */
+.feature-card-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Keeps linked feature card accessible on keyboard focus */
+.feature-card-link:focus-visible {
+  outline: 3px solid #10859c;
+  outline-offset: 4px;
+}
+
+/* Dashboard page layout */
+.dashboard-page {
+  min-height: 100vh;
+  background-color: #74c0d5;
+  color: #111111;
+}
+
+/* Main dashboard content */
+.dashboard-main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 4rem;
+}
+
+/* Dashboard welcome section */
+.dashboard-welcome {
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-location {
+  margin-bottom: 0.25rem;
+  color: #ebee3b;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.dashboard-welcome h1 {
+  margin-bottom: 0.5rem;
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.dashboard-welcome p:last-child {
+  max-width: 720px;
+  color: #222222;
+  font-size: 1.05rem;
+}
+
+/* Dashboard search area */
+.dashboard-search-section {
+  max-width: 650px;
+  margin-bottom: 2rem;
+}
+
+.dashboard-search-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.dashboard-search-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.dashboard-search-row input {
+  flex: 1;
+  min-height: 48px;
+  border: none;
+  border-radius: 999px;
+  padding: 0 1rem;
+  font: inherit;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-search-row button {
+  min-height: 48px;
+  border: none;
+  border-radius: 999px;
+  padding: 0 1.25rem;
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Dashboard content sections */
+.dashboard-section {
+  margin-bottom: 2.5rem;
+}
+
+.dashboard-section-header {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-section-header h2,
+.dashboard-section h2 {
+  font-size: 1.65rem;
+}
+
+.dashboard-section-header button {
+  border: none;
+  background: none;
+  color: #111111;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Student match cards */
+.student-card-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.student-match-card {
+  min-height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  padding: 1rem;
+  background: linear-gradient(180deg, #222222 0%, #111111 100%);
+  color: #ffffff;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.22);
+}
+
+.student-new-label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  background-color: #ffffff;
+  color: #111111;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.student-avatar {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 1rem;
+  display: block;
+  border: 4px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  background-color: #91bc11;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+}
+
+.student-distance {
+  width: fit-content;
+  margin: 0 auto 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.18);
+  font-size: 0.75rem;
+}
+
+.student-match-card h3 {
+  margin-bottom: 0.25rem;
+  text-align: center;
+}
+
+.student-match-card p:last-child {
+  text-align: center;
+  color: #d7d7d7;
+  font-size: 0.9rem;
+}
+
+/* Dashboard category buttons */
+.dashboard-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.dashboard-chip {
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1.1rem;
+  background-color: #ffffff;
+  color: #111111;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-chip:hover,
+.dashboard-search-row button:hover,
+.dashboard-card button:hover {
+  transform: translateY(-2px);
+}
+
+/* Dashboard small text */
+.dashboard-small-text {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  color: #ebee3b;
+  font-weight: 600;
+}
+
+/* Fake map section */
+.dashboard-map {
+  min-height: 360px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 32px;
+  background-color: #f4f1e8;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* Fake map roads */
+.map-road {
+  position: absolute;
+  border-radius: 999px;
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+
+.map-road-one {
+  width: 130%;
+  height: 22px;
+  top: 35%;
+  left: -15%;
+  transform: rotate(-18deg);
+}
+
+.map-road-two {
+  width: 120%;
+  height: 18px;
+  top: 60%;
+  left: -10%;
+  transform: rotate(12deg);
+}
+
+.map-road-three {
+  width: 18px;
+  height: 120%;
+  top: -10%;
+  left: 55%;
+  transform: rotate(8deg);
+}
+
+/* Fake map connect button */
+.map-connect-button {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  background-color: #bf4210;
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Main location pin */
+.map-pin {
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 50% 50% 50% 0;
+  background-color: #d88b6d;
+  color: #ffffff;
+  font-weight: 800;
+  transform: rotate(-45deg);
+  z-index: 2;
+}
+
+.map-pin-main {
+  top: 45%;
+  left: 50%;
+}
+
+.map-pin-main {
+  transform: rotate(-45deg);
+}
+
+.map-pin-main::first-letter {
+  transform: rotate(45deg);
+}
+
+/* Student dots on the fake map */
+.map-student {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  background-color: #91bc11;
+  color: #111111;
+  font-weight: 900;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  z-index: 2;
+}
+
+.map-student-one {
+  top: 35%;
+  left: 26%;
+}
+
+.map-student-two {
+  top: 62%;
+  left: 36%;
+}
+
+.map-student-three {
+  top: 40%;
+  right: 18%;
+}
+
+.map-student-four{
+  top: 45%;
+  left: 56%;
+}
+
+/* Dashboard status message */
+.dashboard-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 2px solid #a2650a;
+  border-radius: 18px;
+  background-color: #fff4e6;
+  color: #7a3f00;
+  text-align: center;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(162, 101, 10, 0.18);
+}
+
+/* Dashboard tablet layout */
+@media (max-width: 900px) {
+  .student-card-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Dashboard phone layout */
+@media (max-width: 600px) {
+  .dashboard-main {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .dashboard-search-row {
+    flex-direction: column;
+  }
+
+  .student-card-row {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-section-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-map {
+    min-height: 300px;
+  }
+}
+
+/* Logged in app toolbar */
+.app-toolbar {
+  width: min(520px, calc(100% - 2rem));
+  margin: 1.25rem auto 0rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  padding: 0.65rem;
+  border-radius: 999px;
+  background-color: #ffffff;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Toolbar links */
+.toolbar-link {
+  min-height: 54px;
+  border-radius: 999px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  color: #555555;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Toolbar icons */
+.toolbar-icon {
+  font-size: 1.1rem;
+}
+
+/* Active toolbar page */
+.toolbar-link.active {
+  background-color: #91bc11;
+  color: #111111;
+}
+
+/* Toolbar hover */
+.toolbar-link:hover {
+  background-color: #f1f1f3;
+  color: #111111;
+}
+
+
+/* Toolbar phone layout */
+@media (max-width: 500px) {
+  .app-toolbar {
+    width: calc(100% - 1rem);
+    bottom: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  .toolbar-link {
+    min-height: 50px;
+    font-size: 0.68rem;
   }
 }
